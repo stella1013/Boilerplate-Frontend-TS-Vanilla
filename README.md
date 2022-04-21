@@ -1,2 +1,2 @@
-# Boilerplate-TS-Frontend
+# Boilerplate-TS-Vanilla-Frontend
 Frontend TypeScript Project

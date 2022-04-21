@@ -1,0 +1,55 @@
+{
+	"status": "success",
+	"requests": [
+		{ "optionValue": "clinical", "optionLabel": "Clinical" },
+		{ "optionValue": "room", "optionLabel": "Environmental Services" },
+		{ "optionValue": "dining", "optionLabel": "Food and Nutrition" },
+		{ "optionValue": "other", "optionLabel": "Other" },
+		{ "optionValue": "video_chat", "optionLabel": "Video Chat" }
+	],
+	"error": ["No modules specified", "No groups specified"],
+	"user": {
+		"created_at": "2021-03-10T16:25:25.909Z",
+		"email": "veronicapreston@gmail.com",
+		"email_verified": true,
+		"family_name": "Summers",
+		"given_name": "Buffy",
+		"identities": [
+			{
+				"connection": "Stormpath",
+				"user_id": "6048f2f5e970680071babeed",
+				"provider": "auth0",
+				"isSocial": false
+			}
+		],
+		"name": "Buffy Summers",
+		"nickname": "vampslayer4ever",
+		"picture": "https://s.gravatar.com/avatar/70e0f6be0df4b733e34678c88bb1cb43?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fbs.png",
+		"updated_at": "2021-03-10T16:38:44.806Z",
+		"user_id": "auth0|6048f2f5e970680071babeed",
+		"username": "vampslayer4ever",
+		"blocked": false,
+		"app_metadata": {
+			"createdBy": "veronica",
+			"createdOn": "03/10/2021 11:25:24",
+			"resetpass": "y",
+			"quickviewFeedback": "feedback,feedback_1",
+			"quickviewPIN": "2333",
+			"request": ["video_chat"],
+			"portal": {
+				"permissions": {
+					"marketingviews": ["read"],
+					"feedback_by_provider": ["read"],
+					"rounding": ["read"]
+				},
+				"groups": {
+					"TSAGO_ED": "General Hospital : Emergency Department",
+					"TSAGO_ISO": "General Hospital : Hospital-wide"
+				}
+			},
+			
+			"updatedBy": "veronica",
+			"updatedOn": "03/10/2021 11:38:44"
+		}
+	}
+}

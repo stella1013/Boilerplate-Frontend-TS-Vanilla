@@ -1,0 +1,14 @@
+.checkbox_group{
+    display: flex;
+  flex-wrap: wrap;
+ // margin: -0.5rem;
+
+    label{
+        width:250px;
+        margin-bottom: 10px;
+    }
+}
+#field-list .bsd-field{
+margin-bottom:1rem;
+}
+input:-webkit-autofill, #username {background-image: none; }

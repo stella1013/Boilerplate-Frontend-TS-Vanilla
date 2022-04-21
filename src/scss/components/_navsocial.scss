@@ -1,0 +1,22 @@
+.NavSocial {
+	background-color: $color-black;
+	color: $color-white;
+	.appTitle {
+		text-transform: uppercase;
+        text-align: left;
+	}
+	.social_links_group {
+		display: flex;
+		justify-content: flex-end;
+		align-items: right;
+        
+        
+        a {
+            font-size: 1.4rem;
+            color: $color-white;
+        }
+	}
+    .link{
+        width: 30px;
+    }
+}

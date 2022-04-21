@@ -1,0 +1,15 @@
+.AppNavigation{
+    background-color:$color-blue-md;
+    padding:1rem;
+    color:$color-white;
+    display: flex;
+    justify-content:flex-end;
+    align-items:right;
+    text-transform: uppercase;
+    font-weight: bold;
+
+    div{
+        margin:0rem 3.5rem;
+    }
+}
+

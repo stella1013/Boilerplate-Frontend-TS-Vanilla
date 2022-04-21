@@ -1,0 +1,29 @@
+.ProjectFeature{
+    display: flex;
+    justify-content:space-between;
+    font-size: 1rem;
+    color: $color-white;
+    margin: 3vw 0vw;
+    .WEB{
+        background-color:$color-orange-md;
+    }
+    .MOTION_GRAPHICS{
+        background-color:$color-green-lt;
+    }
+    .UIUX{
+        background-color:$color-blue-md;
+    }
+    .PRINT{
+        background-color:$color-red;
+    }
+    .project-item{
+        width: 15vw;
+        box-shadow: 2px 4px 5px 0px #d7d7d7;
+    }
+    .infobox{
+        height: 110px;
+    }
+    .icon{
+        font-size: 3rem;
+    }
+}

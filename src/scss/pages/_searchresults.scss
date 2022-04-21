@@ -1,0 +1,339 @@
+.SearchResults {
+	& > .row{
+		background-color: $color-blue-md;	
+	}
+	.input-label {
+			color: #656363;
+			text-transform: uppercase;
+			text-align: left;
+			background-color: #fff;
+			
+			line-height: 1.1rem;
+			font-weight: normal;
+			font-size: 1.3rem;
+	}
+	.PreviewInputField{
+		background-color: $color-blue-dk;
+		width: 100%;
+		text-align: left;
+		padding: 0.2rem;
+		border-left:3px solid $color-blue-md;
+		//border-right:3px solid $color-blue-md;
+		//height: 3.4vh;
+		.input-label {
+			background-color:$color-blue-dk;
+			color: $color-white;
+		}
+		.input{
+			width: 100%;
+			height: 4vh;
+			padding-bottom:1rem;
+			padding-left: 1rem;
+			color: $color-white;
+			font-size: 2rem;
+			text-transform: uppercase;
+			z-index: 1;
+			//background-color: $color-blue-md;
+			
+		}
+	}
+	.PreviewListField {
+		
+		.input-label {
+			background-color:$color-blue-md;
+			color: $color-white;
+		}
+		ul{
+			//list-style:none;
+			
+			padding-left:3rem;
+			//text-indent: 1rem;
+			list-style-position:outside;
+		}
+		li{
+			padding-left: 0;
+		//	text-indent: 1rem;
+		text-transform: capitalize;
+		
+		}
+		.listItem{
+			text-transform: capitalize;
+			//list-style:none;
+			color: $color-white;
+			font-size: 1.5rem;
+			background-color:$color-blue-md;
+			padding:.5rem;
+			border-bottom:1px dotted $color-white;
+			&::after, &::before{
+				padding:5rem;
+			}
+			button{
+				margin:0;
+			}
+		}	
+	}
+	.locator {
+		text-align: center;
+		margin: 1%;
+
+		.title {
+			font-size: 2rem;
+			color: $color-grey-dk;
+			text-transform: uppercase;
+			margin-bottom: 1%;
+		}
+		.lowest {
+			text-align: right;
+			color: $color-green-dk;
+            font-size: 3rem;
+            padding:0% 2%;
+		}
+		.highest {
+			text-align: left;
+			color: $color-red;
+            font-size: 3rem;
+            padding:0% 2%;
+		}
+		@media screen and (max-width: $break-small) {
+		}
+		@media screen and (max-width: $break-medium) {
+			.title {
+				font-size: 2rem;
+            }
+            .lowest {
+			    font-size: 2.4rem;
+		    }
+		    .highest {
+			    font-size: 2.4rem;
+		    }
+		}
+		@media screen and (min-width: $break-large) {
+			.title {
+				font-size: 2rem;
+            }
+            .lowest {
+			    font-size: 3rem;
+		    }
+		    .highest {
+			    font-size: 3rem;
+		    }
+		}
+	}
+	
+	.searchTopic {
+		font-weight: bold;
+		color: $color-blue-md;
+	}
+	
+	.drugOptions {
+		color: $color-blue-lt;
+		font-size: 3rem;
+		padding-bottom: 2.5rem;
+		border-bottom: 1px solid $color-grey-md;
+		.title {
+            padding-right:10%;
+			text-align: right;
+        }
+        @media screen and (max-width: $break-small) {
+		}
+		@media screen and (max-width: $break-medium) {
+			font-size: 2rem;
+		}
+		@media screen and (min-width: $break-large) {
+			font-size: 3rem;
+		}
+	}
+	.optionsContainer {
+		position: relative;
+		z-index: 9999;
+	}
+	.optionsform {
+		position: absolute;
+        width: 100%;
+        @media screen and (max-width: $break-small) {
+
+		}
+		@media screen and (max-width: $break-medium) {
+            $newGutter:2rem;
+			.col-1-of-3{
+                 &:not(:last-child){
+                    margin-right:$newGutter;
+                }
+                width: calc((100% - 2 * #{$newGutter}) / 3);
+            }
+            
+		}
+		@media screen and (min-width: $break-large) {
+            $newGutter:2rem;
+			.col-1-of-3{
+                 &:not(:last-child){
+                    margin-right:$newGutter;
+                }
+                width: calc((100% - 2 * #{$newGutter}) / 3);
+            }
+		}
+        
+	}
+	.resultsBox {
+		background-color: #f7f7f7;
+		box-shadow: 2px 2px 5px $color-grey-md;
+		width: 100vw;
+		margin: 0 auto;
+		padding: 2%;
+	}
+	.ResultsItem{
+		margin:0rem 2rem;
+	}
+	.result-list {
+		height: 33rem;
+		margin-top: 0rem;
+		display: flex;
+		justify-content: flex-start;
+		flex-wrap: wrap;
+		overflow: hidden;
+	}
+	.result-item {
+		width: 30rem;
+		height: 31rem;
+		//margin: 3% 0;
+		margin-left:30rem;
+		background-color: $color-white;
+		text-align: center;
+		box-shadow: 2px 2px 5px $color-grey-md;
+        position: relative;
+        display: flex;
+        flex-direction:column;
+        justify-content: space-between;
+		.storename {
+			font-size: 1.7rem;
+			height: 8rem;
+			background-color: $color-blue-md;
+			color: $color-white;
+			padding: 2rem 1rem;
+            font-weight: bold;
+			display: flex;
+			align-items: center;
+			text-align: center;
+			.pharmacyName{
+				width:90%;
+			}
+			.distance{
+				font-weight: normal;
+				font-size: 1.3rem;
+			}
+		}
+		.note {
+			color: $color-grey-dk;
+			font-size: 2rem;
+		}
+		.price {
+			color: $color-green-dk;
+			font-size: 6rem;
+		}
+		.quantity {
+			color: $color-blue-md;
+			font-size: 3rem;
+        }
+        .buttonHolder{
+            position: relative;
+            height:8rem;
+        }
+		.getVoucher {
+			width: 100%;
+			font-size: 3rem;
+			background-color: $color-green-lt;
+			color: $color-white;
+			padding: 2rem;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			text-transform: uppercase;
+        }
+        @media screen and (max-width: $break-small) {
+		}
+		@media screen and (max-width: $break-medium) {
+			width: 20rem;
+            height: 31rem;
+            margin: 3% 0%;
+            .storename {
+                font-size: 1.5rem;
+                padding: 1rem;
+            }
+            .note {
+                font-size: 2rem;
+            }
+            .price {
+                font-size: 4.3rem;
+            }
+            .quantity {
+                font-size: 2.3rem;
+            }
+            .getVoucher {
+                font-size: 2rem;
+                padding: 2rem;
+                font-weight:bold;
+                
+            }
+		}
+		@media screen and (min-width: $break-large) {
+			width: 25rem;
+            height: 31rem;
+            margin: 1% 0;
+            
+            .storename {
+                font-size: 1.7rem;
+                padding: 1rem;
+                height: 9rem;
+            }
+            .note {
+                font-size: 2rem;
+            }
+            .price {
+                font-size: 5rem;
+            }
+            .quantity {
+                font-size: 2rem;
+            }
+            .getVoucher {
+                font-size: 2.5rem;
+                padding: 2rem;
+                
+            }
+		}
+	}
+	.pagination {
+		width: 20vw;
+		height: 25px;
+		padding-top: 10px;
+		margin: 0 auto;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-around;
+	}
+	.pagination p {
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+	.pagination div {
+		background-color: $color-grey-dk;
+		border-radius: 25px;
+		width: 25px;
+		height: 25px;
+		display: block;
+		color: $color-white;
+		padding: 0.3rem;
+		text-align: center;
+		font-weight: bold;
+	}
+	div.selected {
+		background-color: $color-blue-lt;
+	}
+	.NoResults{
+		font-size: 3rem;
+        padding: 4rem;
+		text-align: center;
+		font-weight: bold;
+
+	}
+}

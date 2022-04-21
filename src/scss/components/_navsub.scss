@@ -1,0 +1,20 @@
+.NavSub {
+	background-color: $color-orange-md;
+	color: $color-white;
+	.appTitle {
+		text-transform: uppercase;
+        text-align: left;
+	}
+
+        a {
+            font-size: 1.1rem;
+			font-weight: bold;
+            color: $color-white;
+			text-decoration: none;
+			text-transform: uppercase;
+        }
+	
+    .link{
+        width: 30px;
+    }
+}

@@ -1,0 +1,96 @@
+.header{
+    width: 100%;
+    
+
+    &--tall{
+      height: 80vh;
+      .subheader-txt {
+       display: block;
+      }
+      .lowercontent {
+        padding: 15vh 8vw 0vh 8vw;
+      }
+    }
+    &--short{
+      height: 15vh;
+      position:absolute;
+      top:-215px;
+      z-index:999999;
+      padding-top: 5px;
+      .lowercontent {
+        padding: 2vh 8vw 0vh 8vw;
+      }
+      .subheader-txt {
+        display: none;
+       }
+    }
+
+    .titlebar{
+      border-bottom: 1px solid #ffffff;
+    padding:15vh 5vw 0vh 5vw;
+    }
+
+    .subheader-txt {
+      font-size: 2.25vw;
+      color: #ffffff;
+    }
+
+    .lowercontent {
+      height: 100%;
+      width: 100%;
+      }
+      .outerWrapper-upper{
+        /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1c2b2e+0,5b8286+99 */
+     background: #0c1516; /* Old browsers */
+     background: -moz-linear-gradient(
+       45deg,
+       #0c323a 0%,
+       #5b8286 99%
+     ); /* FF3.6-15 */
+     background: -webkit-linear-gradient(
+       45deg,
+       #072930 0%,
+       #2a7c85 99%
+     ); /* Chrome10-25,Safari5.1-6 */
+     background: linear-gradient(
+       45deg,
+       #1c2b2e 0%,
+       #5b8286 99%
+     ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1c2b2e', endColorstr='#5b8286',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+     opacity: 1;
+   }
+   .outerWrapper-lower{
+     background: #87b0b6; /* Old browsers */
+     background: -moz-radial-gradient(
+       center,
+       ellipse cover,
+       #87b0b6 0%,
+       #1c474d 100%
+     ); /* FF3.6-15 */
+     background: -webkit-radial-gradient(
+       center,
+       ellipse cover,
+       #87b0b6 0%,
+       #06525c 100%
+     ); /* Chrome10-25,Safari5.1-6 */
+     background: radial-gradient(
+       ellipse at center,
+       #87b0b6 0%,
+       #0a343a 100%
+     ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87b0b6', endColorstr='#335054',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+     opacity: 1;
+     height: 100%;
+   }
+   .innerWrapper{
+     background-image: url('http://veronica.bioscapedigital.com/apps/bsdMaps/v2/honeycomb_2-1.png');
+     height: 100%;
+   }
+    
+}
+
+  
+  
+  
+  

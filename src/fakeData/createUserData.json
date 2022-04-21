@@ -1,0 +1,60 @@
+{
+    "status": "success",
+    "requests": [
+      {
+        "optionValue": "CLINICAL",
+        "optionLabel": "Clinical"
+      },
+      {
+        "optionValue": "VIDEO CHAT",
+        "optionLabel": "Video Chat"
+      }
+    ],
+    "user": {
+      "created_at": "2021-03-03T16:15:31.893Z",
+      "email": "vampslayer@suniiydale.com",
+      "email_verified": true,
+      "family_name": "Summers",
+      "given_name": "Buffy",
+      "identities": [
+        {
+          "connection": "Stormpath",
+          "user_id": "603fb623cf80a40069a90498",
+          "provider": "auth0",
+          "isSocial": false
+        }
+      ],
+      "name": "Buffy Summers",
+      "nickname": "vampslayer4ever",
+      "picture": "https://s.gravatar.com/avatar/ad0c77eed48874c6d35a28ccdb90d496?s=480&r=pg&d=https%3A%2F%2Fcdn.auth0.com%2Favatars%2Fbs.png",
+      "updated_at": "2021-03-03T16:15:33.442Z",
+      "user_id": "auth0|603fb623cf80a40069a90498",
+      "username": "vampslayer4ever",
+      "blocked": false,
+      "app_metadata": {
+        "charts": "usagedetail,marketingsignups",
+        "createdBy": "veronica",
+        "createdOn": "03/03/2021 11:15:31",
+        "resetpass": "y",
+        "quickviewFeedback": "feedback",
+        "quickviewPIN": "2333",
+        "request": [],
+        "portal": {
+          "permissions": {
+            "usagedetail": [
+              "read"
+            ],
+            "marketingsignups": [
+              "read"
+            ]
+          },
+          "groups": {
+            "TSAGO_ED": "General Hospital : Emergency Department",
+            "TSAGO_ISO": "General Hospital : Hospital-wide"
+          }
+        }
+      }
+    },
+    "user_id": "auth0|603fb623cf80a40069a90498",
+    "error": []
+  }

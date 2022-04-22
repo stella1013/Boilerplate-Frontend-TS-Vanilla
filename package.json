@@ -1,8 +1,11 @@
 {
-  "name": "user_create",
+  "name": "create-vp-app",
   "version": "1.0.0",
-  "description": "Creates Users",
+  "description": "",
   "private": true,
+  "bin": {
+    "create-vp-app": "./bin/create-vp-app.js"
+  },
   "scripts": {
     "test": "jest --watch",
     "watch": "webpack --watch",
@@ -24,7 +27,7 @@
     "watch:sass": "node-sass sass/main.scss src/style.css -w",
     "refresh-link": "npm link /Volumes/Sammy/Documents/portal-dashboard-frontend/bsdui_lib"
   },
-  "author": "Veronica Preston <veronicapreston@bioscapedigital.com> (http://www.bioscapedigital.com)",
+  "author": "Veronica Preston <relativelydarling@gmail.com> (http://www.veronicapreston@gmail.com)",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.15.0",

@@ -98,7 +98,7 @@ function buildPackageJson(packageJson, folderName) {
   } = packageJson;
 
   Object.assign(newPackage, {
-    name: folderName,
+    name: '@stella1013/' + folderName,
     version: '1.0.0',
     description: '',
   author: "Veronica Preston <relativelydarling@gmail.com> (http://www.veronicapreston@gmail.com)",

@@ -1,25 +1,22 @@
-/* const { moduleFileExtensions } = require("./jest.config");
+//USED FOR TEST RUNNER JEST
+//const { moduleFileExtensions } = require("./jest.config");
 
-module.exports = api => {
-    const isTest = api.env('test');
-    api.cache(true);
-    return {
-        presets:[
-            
-                
-                [ 
-                    '@babel/preset-env',   
-                    { 
-                      targets: {
-                          browsers:['last 2 versions'],
-                          node: 'current'
-                        },
-                      modules: isTest ? 'commonjs' : false
-                    }
-                ],
-                '@babel/preset-typescript'
-            
-            ],
-        plugins:[['@babel/plugin-proposal-decorators', {legacy: true}]]
-    }
-} */
+module.exports = (api) => {
+	const isTest = api.env('test');
+	api.cache(true);
+	return {
+		presets: [
+			[
+				'@babel/preset-env',
+				{
+					targets: {
+						node: 'current'
+					},
+					modules: isTest ? 'es6' : false,
+				},
+			],
+			'@babel/preset-typescript',
+		],
+		plugins: [['@babel/plugin-proposal-decorators', { legacy: true }]],
+	};
+};

@@ -15,7 +15,7 @@ import { ViewHandler } from './ViewHandler';
 export class App {
 		private appContainer: HTMLDivElement;
 		private formContainer: HTMLDivElement;
-		private appTitle = 'Bioscape Digital Portal Admin';
+		private appTitle = '';
 	
 		private viewHandler = new ViewHandler();
 

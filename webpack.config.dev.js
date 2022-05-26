@@ -2,17 +2,21 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ModuleFederationPlugin = require("webpack").container.ModuleFederationPlugin;
 const path = require('path');
-const Dotenv = require('dotenv-webpack');
+const Dotenv = require('dotenv-webpack'); //for reading env var in project
+require('dotenv').config(); //for reading env var in the webpack config
+
 
 module.exports = ['inline-source-map'].map((devtool) => ({
 	mode: 'development',
 	devServer: {
 		contentBase: path.resolve(__dirname, 'src'),
 		compress: true,
-		host: '0.0.0.0',
+		//host: '0.0.0.0', //<--- for docker
 		port: 8081,
 		inline: true,
 		hot: true,
+		//public: 'http://0.0.0.0:8081', //<--- for docker
+		//publicPath: '/', //<--- docker
 		watchContentBase: true,
 		headers: {
 			'Access-Control-Allow-Origin': '*',
@@ -23,61 +27,75 @@ module.exports = ['inline-source-map'].map((devtool) => ({
 	resolve: { extensions: ['.ts', '.js'] },
 	module: {
 		rules: [
-				 {
-				  test: /\.m?ts$/,
-				  exclude: /node_modules/,
-				  use: {
-					loader: "babel-loader",
+			{
+				test: /\.m?ts$/,
+				exclude: /(node_modules|bower_components)/,
+				use: {
+					loader: 'babel-loader',
 					options: {
-					  presets: ['@babel/preset-env', '@babel/preset-typescript'],
-					  plugins:[['@babel/plugin-proposal-decorators', {legacy: true}], ["@babel/plugin-proposal-class-properties", { "loose": true }],
-					  ["@babel/plugin-proposal-private-methods", { "loose": true }]]
-					}
-				  }
+						presets: ['@babel/preset-env', '@babel/preset-typescript'],
+						plugins: [
+							[
+								'@babel/plugin-proposal-private-property-in-object',
+								{ loose: true },
+							],
+							['@babel/plugin-proposal-decorators', { legacy: true }],
+							['@babel/plugin-proposal-class-properties', { loose: true }],
+							['@babel/plugin-proposal-private-methods', { loose: true }],
+							['@babel/plugin-transform-runtime'],
+							['@babel/plugin-transform-modules-commonjs'],
+						],
+					},
 				},
-			/*{
+			},
+			{
+				test: /\.html$/i,
+				loader: "html-loader",
+			},
+		
+			/* {
 				test: /\.ts$/,
 				use: 'ts-loader',
 				exclude: [/node_modules/, /dist/],
-			},*/
-			 {
-				test: /\.scss$/,
+			}, */
+			{
+				test: /\.s?css$/,
 				exclude: /node_modules/,
 				use: [
-					MiniCssExtractPlugin.loader,
+					'style-loader',
+					//MiniCssExtractPlugin.loader,
 					{
-					  loader: 'css-loader'
+						loader: 'css-loader',
+						options: {
+							url: false,
+						},
 					},
 					{
-					  loader: 'sass-loader',
-					  options: {
-						sourceMap: true,
-						// options...
-					  }
-					}
-				  ]
-			  
-			  
-			},
-			{
-				test: /\.(png|jpe?g|gif)$/i,
-				use: [
-					{
-						loader: 'file-loader',
+						loader: 'sass-loader',
 						options: {
-							outputPath: 'assets/',
-							name: '[name].[ext]',
+							// Prefer `dart-sass`
+							implementation: require('sass'),
+							sourceMap: false,
+							sassOptions: {
+								outputStyle: 'compressed',
+							},
 						},
 					},
 				],
 			},
+			{
+				test: /\.(svg|png|jpe?g|gif)$/i,
+				type: 'asset/resource'
+				
+			},
 		],
-    },
+	},
+	output: {assetModuleFilename: 'images/[name][ext]'},
     resolve: { extensions: ['.ts', '.js'] },
 	plugins: [
 		new Dotenv({
 			path: './.env.development'}),
-		 /* new ModuleFederationPlugin({
+			/* new ModuleFederationPlugin({
 			name:'user_create',
 			filename:'remoteEntry.js',
 			remotes:{},
@@ -86,19 +104,19 @@ module.exports = ['inline-source-map'].map((devtool) => ({
 			},
 			shared:{} //possibly share Form Fields
 		}),  */
-		new HtmlWebpackPlugin({
-			title: 'DEVCreate User',
-			inject: true,
-			filename: 'index.html',
-			template: path.resolve(__dirname, './src/index.html'),
-			hash: false,
-			//chunks: ['app']
-			
-		}),
-		
+			new HtmlWebpackPlugin({
+				title: process.env.APP_TITLE,
+				scriptLoading: "defer",
+				inject: true,
+				filename: 'index.html',
+				template: path.resolve(__dirname, './src/index.html'),
+				hash: false,
+				//chunks: ['app']
+			}),
+		/*
 		new MiniCssExtractPlugin({
 			filename: 'main.css',
-		})
+		})*/
 		
 	],
 	

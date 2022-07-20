@@ -12,7 +12,7 @@ module.exports = (api) => {
 					targets: {
 						node: 'current'
 					},
-					modules: isTest ? 'es6' : false,
+					modules: isTest ? 'commonjs' : false,
 				},
 			],
 			'@babel/preset-typescript',

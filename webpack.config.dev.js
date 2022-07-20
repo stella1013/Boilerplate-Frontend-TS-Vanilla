@@ -33,7 +33,7 @@ module.exports = ['inline-source-map'].map((devtool) => ({
 				use: {
 					loader: 'babel-loader',
 					options: {
-						presets: ['@babel/preset-env', '@babel/preset-typescript'],
+						presets: [['@babel/preset-env', {"modules": false}], '@babel/preset-typescript'],
 						plugins: [
 							[
 								'@babel/plugin-proposal-private-property-in-object',

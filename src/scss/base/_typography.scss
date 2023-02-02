@@ -4,72 +4,12 @@ html {
 body {
 	font-family: 'Roboto', sans-serif;
 	font-size: 1.5rem;
-	color: $color-grey-dk;
-	font-weight: normal;
-}
-h1 {
-	color: rgb(255, 255, 255);
-	font-size: 5vw;
+	//color: $color-grey-dk;
 	font-weight: normal;
 }
 
-.heading-primary {
-	color: $color-blue-dk;
-	text-transform: uppercase;
-	backface-visibility: hidden;
-	margin: 0rem 5rem 2rem 5rem;
 
-	&--main {
-		display: block;
-		font-size: 3rem;
-		font-weight: bold;
-		animation-name: moveInLeft;
-		animation-duration: 1s;
-		animation-timing-function: ease-out;
-		padding-bottom: 3rem;
-		border-bottom: 1px solid $color-grey-dk;
-		@media screen and (max-width: $break-small) {
-		}
-		@media screen and (max-width: $break-medium) {
-			font-size: 3rem;
-		}
-		@media screen and (min-width: $break-large) {
-			font-size: 4rem;
-		}
-	}
 
-	&--sub {
-		display: block;
-		padding-top: 1rem;
-		font-size: 2rem;
-		font-weight: bold;
-		letter-spacing: 0.2rem;
-        animation: moveInRight 1s ease-out;
-        @media screen and (max-width: $break-small) {
-		}
-		@media screen and (max-width: $break-medium) {
-            letter-spacing: 0rem;
-            padding: 0% 15%;
-			font-size: 2rem;
-		}
-		@media screen and (min-width: $break-large) {
-			font-size: 2.2rem;
-		}
-	}
-}
-
-.txt-blue-md {
-	color: $color-blue-md;
-}
-.txt-blue-lt {
-	color: $color-blue-lt;
-}
-.txt-green-lt {
-	color: $color-green-lt;
-}
-.txt-red {
-	color: $color-red;
-}
 .center{
 	text-align: center;
 	margin:0 auto;

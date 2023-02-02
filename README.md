@@ -1,46 +1,90 @@
-# Getting Started with Create React App
+# Boilerplate TS- Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This version of the application introduces functionality for customers with limited technology skillsets so that they can easily control specific aspects (Color scheme, number of items on a given page or section, text elements, graphics and text, video etc.) of platform UX and content.
 
-## Available Scripts
+## What’s in the repo
 
-In the project directory, you can run:
+This repo includes the source code of Bioscape Digital. The app has the following structure:
 
-### `yarn start`
+```
+helpers         // Console helpers *for you* that validate
+                // a few things during the build.
+                // Just don’t care about them.
 
-Runs the app in the development mode.\
+dist          // Static public files (HTML and CSS files)
+           // Results of the webpack build (JS and SVG files)
+scss       // Files to edit CSS Stylesheets
+src
+|- api         // The API module that makes requests to GitHub API
+|- components  // Components that get rendered into the page.
+               // Just plain JS, no frameworks (see “How components work”
+               // below for additional info)
+|- templates   // Templates of HTML pages
+|- utils       // Additional utilities
+
+|- App.ts    // The entry point. Renders the application
+.gitignore
+.babelrc
+index.html
+Jest.config.js
+package.json
+package-lock.json
+README.md
+style.css // Auto Generated file. Do not make edits here. They will be overwritten.
+tsconfig.json
+webpack.config.js // ↑ The webpack config file
+webpack.config.prod.js // Webpack config file for production
+```
+
+## Installation
+
+1\. Clone the repository:
+
+```bash
+git clone 'FROM WHATEVER REPOSITORY'
+```
+
+### Development Mode
+
+For those who want to run the code locally.
+The page will reload if you make edits.
+You will also see any errors in the console.
+
+### Docker
+
+This project is also Dockerized ONLY for development. This is by far the easiest way to run the project. Dependencies will not need to be manually installed. Download the [Docker App](https://docs.docker.com/get-docker/) and run it. In Terminal navigate the project folder and run `docker up`. To quit run `docker down`.
+
+Open [localhost:8080](http://localhost:8080) to see the live app.
+
+### NPM or YARN
+
+This uses NPM or Yarn Package Managers to run/build projects so you will need to make sure you have them installed unless you use the Docker route explained above. You will also have to Launch the Backend(if applicable to the project) before the Frontend.
+
+
+#### 1\. Install the dependencies
+
+```bash
+cd frontend
+npm install
+```
+
+#### 2\. Run the development server
+
+```bash
+npm run start
+```
+
+### **Launch the app**
+
+Runs the FRONTEND app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Testing
+In Terminal navigate the project folder/frontend and run `npm test`/`yarn test`.
+Launches the test runner in the interactive watch mode.
 
-### `yarn test`
+#### 4\. Test Runner
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+npm run test
+```

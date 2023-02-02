@@ -1,21 +1,26 @@
 *, *::after, *::before{
     margin:0;
     padding: 0;
-    box-sizing: inherit;
+   box-sizing: inherit;
 
+}
+html, body{
+    height: 100%;
+    margin:0;
 }
 html{
     // defines 1rem
-    font-size: 62.5%;
+    font-size: 100%;
+    
+
+
 }
 body{
- 
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-    background: #ffffff; /* Old browsers */
-   opacity: 1;
-    height: 100%;
+   display: grid;
+   // box-sizing: border-box;
+//background: $color-darkmode-black;/* Old browsers */
+   //opacity: 1;
+    
    
 }
 .align-center{

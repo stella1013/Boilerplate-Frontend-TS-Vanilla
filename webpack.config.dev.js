@@ -9,15 +9,27 @@ require('dotenv').config(); //for reading env var in the webpack config
 module.exports = ['inline-source-map'].map((devtool) => ({
 	mode: 'development',
 	devServer: {
-		contentBase: path.resolve(__dirname, 'src'),
-		compress: true,
-		//host: '0.0.0.0', //<--- for docker
+		
+		host: '0.0.0.0', //<--- for docker
 		port: 8081,
-		inline: true,
+		//inline: true,
 		hot: true,
+		devMiddleware: {
 		//public: 'http://0.0.0.0:8081', //<--- for docker
-		//publicPath: '/', //<--- docker
-		watchContentBase: true,
+		
+		},
+		client:{
+			webSocketURL:{
+				hostname: "0.0.0.0",
+				pathname: "/http",
+				port: 8081
+			}
+		},
+		static:{
+			directory: path.resolve(__dirname, 'src'),
+			watch:true
+			//publicPath: '/', //<--- docker
+		},
 		headers: {
 			'Access-Control-Allow-Origin': '*',
 		},

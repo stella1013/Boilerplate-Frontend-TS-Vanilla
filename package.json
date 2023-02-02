@@ -12,6 +12,7 @@
     "start": "webpack serve --env ENVIRONMENT=development --config webpack.config.dev.js",
     "build-staging": "webpack --env ENVIRONMENT=staging  --config webpack.config.staging.js",
     "build": "webpack --env ENVIRONMENT=production  --config webpack.config.prod.js",
+    "add-framework": "",
     "commit": "cz",
     "lint": "eslint src/**",
     "styleguide:build": "...",

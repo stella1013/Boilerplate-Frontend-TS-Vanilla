@@ -2,6 +2,10 @@
 
 This version of the application introduces functionality for customers with limited technology skillsets so that they can easily control specific aspects (Color scheme, number of items on a given page or section, text elements, graphics and text, video etc.) of platform UX and content.
 
+## Dependency List
+
+ @babel/core @babel/plugin-proposal-class-properties @babel/plugin-proposal-decorators @babel/plugin-proposal-private-methods @babel/plugin-transform-modules-commonjs @babel/plugin-transform-runtime @babel/preset-env @babel/preset-typescript @types/jest @types/node  babel-jest babel-loader commitizen css-loader cz-conventional-changelog dotenv-webpack file-loader file-replace-loader html-loader-jest html-loader html-webpack-plugin husky jest-environment-jsdom jest-serializer-html jest mini-css-extract-plugin sass-loader@ sass standard-version style-loader ts-jest ts-node typescript webpack-cli webpack-dev-server webpack
+
 ## What’s in the repo
 
 This repo includes the source code of Bioscape Digital. The app has the following structure:
